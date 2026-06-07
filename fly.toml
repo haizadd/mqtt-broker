@@ -1,0 +1,16 @@
+# The unique system name registered to your cloud dashboard account
+app = "hf-gateway-sin-mqtt"
+primary_region = "sin"
+
+[build]
+  # Instructs Fly.io to read the custom Dockerfile we wrote above
+  dockerfile = "Dockerfile"
+
+# Configures the public network gate for your physical hardware
+[[services]]
+  internal_port = 1883
+  protocol = "tcp"
+
+  # Map public internet requests on port 1883 to the internal software engine
+  [[services.ports]]
+    port = 1883
