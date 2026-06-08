@@ -1,4 +1,4 @@
-FROM eclipse-mosquitto:2-alpine
+FROM eclipse-mosquitto:2
 
 # Copy configuration and password files
 COPY mosquitto.conf /mosquitto/config/mosquitto.conf
